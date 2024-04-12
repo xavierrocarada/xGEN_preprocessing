@@ -174,3 +174,24 @@ fgbio CorrectUmis -i ${f} -o ${f}.fixedumi.bam \
 done
 
 ```
+
+# bazam
+
+Install bazam in conda.  
+```
+conda activate bazam 
+
+module purge
+module use /apps/modules/all
+module load SAMtools/1.9-foss-2016b
+module load Java/10.0.1
+
+for f in *.mapped.duplicates.removed.bam; do 
+
+samtools index ${f}
+
+done
+
+java -jar /home/a1782219/.conda/envs/bazam/share/bazam-1.0.1-1/bazam.jar -bam LP122_10.unmapped.withUMI.bam > LP122_10.bazam.fastq
+
+```
