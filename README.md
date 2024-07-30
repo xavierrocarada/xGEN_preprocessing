@@ -50,8 +50,8 @@ Install fgbio in conda.  Setup miniconda as https://github.com/ACAD-UofA/Bioinfo
 To install new softwares, such as fastp or multiqc:
 ```
 conda activate
-conda create -n fastp/multiqc
-conda install -c bioconda fastp / conda install -c bioconda multiqc
+conda create -n fgbio
+conda install bioconda::fgbio
 ```
 Script:
 ```
